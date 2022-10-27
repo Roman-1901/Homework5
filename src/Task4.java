@@ -8,10 +8,10 @@ public class Task4 {
             System.out.println("Интервал не может быть меньше допустимого расстояния первого дня");
         } else {
             if (deliveryDistance % interval < firstDayDistance) {
-                countDay = countDay + deliveryDistance / interval;
+                countDay += deliveryDistance / interval;
                 System.out.println("Потребуется дней: " + countDay);
             } else {
-                countDay = countDay + (deliveryDistance / interval + 1);
+                countDay += (deliveryDistance / interval + 1);
                 System.out.println("Потребуется дней: " + countDay);
             }
         }
