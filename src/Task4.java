@@ -5,8 +5,8 @@ public class Task4 {
         int firstDayDistance = 20;
         int countDay = 1;
         if (interval < firstDayDistance) {
-            System.out.println("Интервал не может быть меньше допустимого значения "+ firstDayDistance); //Доставка в пределах 20км занимает сутки, интервал на текущий момент равен 40км, его можно менять, но он не должен быть меньше значения расстояния, которое учитывается за первые сутки.
-        } else {
+            System.out.println("Интервал не может быть меньше допустимого значения " + firstDayDistance); //Доставка в пределах 20км занимает сутки, интервал на текущий момент равен 40км,
+        } else {                                                               // его можно менять, но он не должен быть ниже значения расстояния, которое учитывается за первые сутки.
             if (deliveryDistance % interval < firstDayDistance) {
                 countDay += deliveryDistance / interval;
                 System.out.println("Потребуется дней: " + countDay);
@@ -17,3 +17,4 @@ public class Task4 {
         }
     }
 }
+
