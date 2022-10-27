@@ -1,10 +1,9 @@
 public class Task4 {
     public static void main(String[] args) {
-        int deliveryDistance = 61;
+        int deliveryDistance = 60;
         int interval = 40;
-        int firstDayDistance = 20;
         int countDay = 1;
-        if (deliveryDistance % interval <= firstDayDistance) {
+        if (deliveryDistance % interval < 20) {
             countDay += deliveryDistance / interval;
             System.out.println("Потребуется дней: " + countDay);
         }else {
