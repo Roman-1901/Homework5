@@ -3,9 +3,7 @@ public class test {
         int age = 25;
         double salary = 79251;
         double wantedSum = 330_000;
-
         double rate = 10;
-        String output;
 
         if (salary > 80_000) {
             rate = (rate - 0.7);
@@ -16,17 +14,13 @@ public class test {
                 rate = (rate + 0.5);
             }
         }
-
-
-        double monthlyPayment = ((wantedSum / 100 * rate) / 12) + wantedSum / 12;
+        double monthlyPayment = (wantedSum / 100 * rate + wantedSum) / 12;
         double maxMonthlyPayment = salary / 2;
-        if (maxMonthlyPayment >= monthlyPayment) {
-            output = "Одобрено";
-        } else {
-            output = "Отказано";
-        }
         System.out.println("Максимальный платеж при ЗП " + salary + " равен " + maxMonthlyPayment + " рублей.");
-
-        System.out.println("Платеж по кредиту " + String.format("%.2f", monthlyPayment) + " рублей. " + output + ".");
+        if (maxMonthlyPayment >= monthlyPayment) {
+            System.out.println("Платеж по кредиту " + String.format("%.2f", monthlyPayment) + " рублей. Одобрено.");
+        } else {
+            System.out.println("Платеж по кредиту " + String.format("%.2f", monthlyPayment) + " рублей. Отказано.");
+        }
     }
 }
